@@ -1,0 +1,51 @@
+Beginning AutoGluon training...
+AutoGluon will save models to '/Users/athulithparaselli/Documents/GitHub/Chaotic-Zeroshot-Forecasting/AutogluonModels/ag-20250310_200714'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.12.9
+Operating System:   Darwin
+Platform Machine:   arm64
+Platform Version:   Darwin Kernel Version 24.0.0: Mon Aug 12 20:52:31 PDT 2024; root:xnu-11215.1.10~2/RELEASE_ARM64_T6030
+CPU Count:          11
+GPU Count:          0
+Memory Avail:       3.90 GB / 18.00 GB (21.7%)
+Disk Space Avail:   276.84 GB / 460.43 GB (60.1%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': WQL,
+ 'hyperparameters': {'Chronos': {'model_path': 'amazon/chronos-bolt-small'}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 48,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'verbosity': 2}
+
+Inferred time series frequency: 'h'
+Provided train_data has 353500 rows, 414 time series. Median time series length is 960 (min=700, max=960). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'WQL'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-03-10 13:07:17
+Models that will be trained: ['Chronos[amazon__chronos-bolt-small]']
+Training timeseries model Chronos[amazon__chronos-bolt-small]. 
+	-0.0351       = Validation score (-WQL)
+	5.39    s     = Training runtime
+	8.07    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[amazon__chronos-bolt-small]']
+Total runtime: 13.49 s
+Best model: Chronos[amazon__chronos-bolt-small]
+Best model score: -0.0351
+Model not specified in predict, will default to the model with the best validation score: Chronos[amazon__chronos-bolt-small]
