@@ -1,0 +1,16 @@
+Dataset: Zooplankton survey of Oneida Lake New York 1964 to present (https://biotime.st-andrews.ac.uk/selectStudy.php?study=247)
+
+cleaning steps
+1. picked genuses with most data points: [dia, ]
+2. rounded observation dates to that month's first date (march 15 -> march 1st)
+3. for some dates/months, there were multiple observations, sometimes at slightly different locations (indicated by longitude, latitude). these were mean aggregated, resulting in one value for each month
+4. missing months were imputed with NaNs as Chronos has a built-in mechanism to handle missing values. 
+
+
+daphnia: daphnia mendotae
+diacyclops: diacyclops thomasi
+diaptomus: diaptomus minutus
+mesocyclops: mesocyclops edax
+
+
+frequency: One MONTH
