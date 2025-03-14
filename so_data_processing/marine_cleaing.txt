@@ -5,10 +5,9 @@ cleaning steps
 4. missing weeks were imputed with NaNs as Chronos has a built-in mechanism to handle missing values. 
 
 
-daphnia: daphnia mendotae
-diacyclops: diacyclops thomasi
-diaptomus: diaptomus minutus
-mesocyclops: mesocyclops edax
+flagellate sp4: flagellate sp4
+strombidium: strombidium
+dinoflagellate: dinoflagellate
 
 
 frequency: One WEEK
