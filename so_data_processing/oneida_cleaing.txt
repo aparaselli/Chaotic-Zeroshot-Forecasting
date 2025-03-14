@@ -11,3 +11,6 @@ daphnia: daphnia mendotae
 diacyclops: diacyclops thomasi
 diaptomus: diaptomus minutus
 mesocyclops: mesocyclops edax
+
+
+frequency: One MONTH

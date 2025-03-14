@@ -1,0 +1,14 @@
+cleaning steps
+1. picked genuses with most data points
+2. rounded observation dates to that week's monday
+3. for some weeks, there were multiple observations, sometimes one day apart. these were mean aggregated, resulting in one value for each week
+4. missing weeks were imputed with NaNs as Chronos has a built-in mechanism to handle missing values. 
+
+
+daphnia: daphnia mendotae
+diacyclops: diacyclops thomasi
+diaptomus: diaptomus minutus
+mesocyclops: mesocyclops edax
+
+
+frequency: One WEEK
