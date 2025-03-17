@@ -1,9 +1,7 @@
 training_data_paths:
-- "/home/ubuntu/tsmixup-data.arrow"
-- "/home/ubuntu/kernelsynth-data.arrow"
+- "Data\\dysts_arrow.arrow"
 probability:
-- 0.9
-- 0.1
+- 1.0
 context_length: 512
 prediction_length: 64
 min_past: 60
@@ -30,6 +28,6 @@ tokenizer_kwargs:
 n_tokens: 4096
 lr_scheduler_type: linear
 warmup_ratio: 0.0
-dataloader_num_workers: 1
+dataloader_num_workers: 5
 max_missing_prop: 0.9
 use_eos_token: true
