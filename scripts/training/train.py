@@ -100,7 +100,8 @@ def get_training_job_info() -> Dict:
     job_info["gluonts_version"] = gluonts.__version__
     job_info["transformers_version"] = transformers.__version__
     job_info["accelerate_version"] = accelerate.__version__
-
+    
+    print(job_info)
     return job_info
 
 
@@ -507,9 +508,9 @@ def main(
     context_length: int = 512,
     prediction_length: int = 64,
     min_past: int = 64,
-    max_steps: int = 200_000,
-    save_steps: int = 50_000,
-    log_steps: int = 500,
+    max_steps: int = 100,
+    save_steps: int = 50,
+    log_steps: int = 2,
     per_device_train_batch_size: int = 32,
     learning_rate: float = 1e-3,
     optim: str = "adamw_torch_fused",

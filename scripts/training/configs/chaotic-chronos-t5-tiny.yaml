@@ -7,9 +7,9 @@ probability:
 context_length: 512
 prediction_length: 64
 min_past: 60
-max_steps: 200_000
-save_steps: 100_000
-log_steps: 500
+max_steps: 100
+save_steps: 50
+log_steps: 2
 per_device_train_batch_size: 32
 learning_rate: 0.001
 optim: adamw_torch_fused
@@ -30,6 +30,6 @@ tokenizer_kwargs:
 n_tokens: 4096
 lr_scheduler_type: linear
 warmup_ratio: 0.0
-dataloader_num_workers: 1
+dataloader_num_workers: 0
 max_missing_prop: 0.9
 use_eos_token: true
