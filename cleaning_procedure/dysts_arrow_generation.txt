@@ -4,3 +4,7 @@ generation steps
 1. for each row of data, we randomly picked a starting index and a step size in [80, 200]
     - step size was determined by inspecting the data (Athu)
 2. repeat the step 20 times per row, for all 486 rows, resulting in 9720 time series, each consisting of 512 + 64 observations
+
+
+notes on reproducability
+dysts_dataset_generation.csv contains the starting index and step size chosen to generate each row in dysts_arrow.arrow. This ensures reproducability of the data. 
