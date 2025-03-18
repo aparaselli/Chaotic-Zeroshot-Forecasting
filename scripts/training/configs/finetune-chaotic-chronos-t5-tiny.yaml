@@ -29,7 +29,7 @@ tokenizer_kwargs:
   high_limit: 15.0
 n_tokens: 4096
 lr_scheduler_type: linear
-warmup_ratio: 0.0
-dataloader_num_workers: 1
+warmup_ratio: 0.1
+dataloader_num_workers: 0
 max_missing_prop: 0.9
 use_eos_token: true
