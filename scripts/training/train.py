@@ -43,12 +43,10 @@ from gluonts.transform import (
     LeavesMissingValues,
     LastValueImputation,
 )
-
 from chronos import ChronosConfig, ChronosTokenizer
-
+import transformers
 
 app = typer.Typer(pretty_exceptions_enable=False)
-
 
 def is_main_process() -> bool:
     """
@@ -508,9 +506,9 @@ def main(
     context_length: int = 512,
     prediction_length: int = 64,
     min_past: int = 64,
-    max_steps: int = 100,
-    save_steps: int = 50,
-    log_steps: int = 2,
+    max_steps: int = 200_000,
+    save_steps: int = 50_000,
+    log_steps: int = 500,
     per_device_train_batch_size: int = 32,
     learning_rate: float = 1e-3,
     optim: str = "adamw_torch_fused",
