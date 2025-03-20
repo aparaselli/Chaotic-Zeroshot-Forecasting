@@ -1,0 +1,57 @@
+set aside 20% of genuses we have data for as test
+
+for the rest, we np.nan pad on the left until the data reaches as a length of 512+64. Then we do the same procedure as the dysts_arrow data to convert to arrow fromat. 
+
+genuses used for training:
+
+from Lake Zurich dataset:
+['Phacotus lenticularis',
+  'Fragilaria crotonensis',
+  'Ceratium hirundinella',
+  'Tabellaria fenestrata',
+  'Diaptomus sp C1-C3',
+  'Bosmina longirostris adult',
+  'Cyclops sp eggs',
+  'Cymbella sp',
+  'Cyclops sp SU C4-C5',
+  'Eudiaptomus gracilis male',
+  'Cyclops abyssorum male',
+  'Dinobryon sp',
+  'Centrales',
+  'Eudiaptomus gracilis female',
+  'Nitzschia sp',
+  'Pandorina morum',
+  'Bosmina longirostris juvenile',
+  'Closterium aciculare',
+  'Cyclops abyssorum female',
+  'Cosmarium sp',
+  'Rhodomonas sp',
+  'Ulnaria delicatissima var angustissima',
+  'Cyclopoida nauplia',
+  'Stephanodiscus sp',
+  'Diplostraca eggs',
+  'Diaptomus sp eggs',
+  'Gymnodinium helveticum',
+  'Eudiaptomus gracilis ovaria']
+
+- marine-dinoflagellate.csv
+- marine-strombidium.csv
+- onedia-daphnia.csv
+- onedia-mesocyclops.csv
+
+
+test:
+from Lake Zurich dataset:
+
+['Cyclops sp SU C1-C3',
+  'Gymnodinium sp',
+  'Erkenia subaequiciliata',
+  'Aphanizomenon flos-aquae',
+  'Asterionella formosa',
+  'Elakatothrix gelatinosa',
+  'Staurastrum sp',
+  'Diaptomus sp C4-C5']
+- marine-flagellate sp4.csv
+- onedia-diacyclops.csv
+- onedia-diaptomus.csv
+- onedia-skistodiaptomus.csv
