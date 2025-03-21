@@ -1,0 +1,60 @@
+{
+    "training_config": {
+        "training_data_paths": "['../../Data/dysts_arrow.arrow', '../../Data/eco_data.arrow']",
+        "probability": "[1.0, 0.95]",
+        "context_length": 512,
+        "max_steps": 200000,
+        "save_steps": 10000,
+        "log_steps": 500,
+        "per_device_train_batch_size": 32,
+        "learning_rate": 0.001,
+        "optim": "adamw_torch_fused",
+        "shuffle_buffer_length": 100000,
+        "gradient_accumulation_steps": 1,
+        "model_id": "google/t5-efficient-mini",
+        "model_type": "seq2seq",
+        "random_init": true,
+        "tie_embeddings": true,
+        "output_dir": "./output/",
+        "tf32": true,
+        "torch_compile": false,
+        "tokenizer_class": "MeanScaleUniformBins",
+        "tokenizer_kwargs": "{'low_limit': -15.0, 'high_limit': 15.0}",
+        "n_tokens": 4096,
+        "n_special_tokens": 2,
+        "pad_token_id": 0,
+        "eos_token_id": 1,
+        "use_eos_token": true,
+        "lr_scheduler_type": "linear",
+        "warmup_ratio": 0.0,
+        "dataloader_num_workers": 1,
+        "num_samples": 20,
+        "temperature": 1.0,
+        "top_k": 50,
+        "top_p": 1.0,
+        "seed": 2047101132,
+        "max_missing_prop": 0.9,
+        "min_past": 60,
+        "prediction_length": 64
+    },
+    "job_info": {
+        "cuda_available": true,
+        "device_count": 1,
+        "device_names": {
+            "0": "NVIDIA GeForce RTX 3090"
+        },
+        "mem_info": {
+            "0": [
+                18113626112,
+                25304170496
+            ]
+        },
+        "torchelastic_launched": false,
+        "python_version": "3.10.8 (main, Nov 24 2022, 14:13:03) [GCC 11.2.0]",
+        "torch_version": "2.5.1+cu124",
+        "numpy_version": "1.26.4",
+        "gluonts_version": "0.16.0",
+        "transformers_version": "4.49.0",
+        "accelerate_version": "0.34.2"
+    }
+}
